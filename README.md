@@ -1,29 +1,13 @@
-# image-editor
+# ImageEditor
 
-## Project setup
-```
-npm install
-```
+## Overview
+An editor based on vuejs for images, support for rotation and scaling by manipulating dom directly.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Features
+- Support image rotation
+- Support image scaling
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Contributing
+**If you have any questions, please open an** ***[issue](https://github.com/wuyifan18/ImageEditor/issues).***
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+**Welcome to** ***[pull requests](https://github.com/wuyifan18/ImageEditor/pulls)*** **to improve this project!**
