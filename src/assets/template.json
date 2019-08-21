@@ -1,0 +1,274 @@
+{
+  "version": "5.7.0",
+  "type": "poster",
+  "global": {
+    "zoom": 1,
+    "dpi": 72,
+    "showWatermark": false,
+    "backgroundColor": "#ffffffff"
+  },
+  "layouts":[
+    {
+      "title": "海报",
+      "backgroundSize": null,
+      "backgroundImage": null,
+      "backgroundColor": "#ffffff00",
+      "backgroundImageInfo": {
+        "opacity": 1,
+        "width": 100,
+        "height": 100,
+        "transform": {
+          "a": 1,
+          "b": 0,
+          "c": 0,
+          "d": 1,
+          "tx": 0,
+          "ty": 0
+        }
+      },
+      "backgroundRepeat": "no-repeat",
+      "height": 950,
+      "width": 790,
+      "className": null,
+      "repeatId": null,
+      "repeatGroup": null,
+      "elements": [
+        {
+          "type": "image",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 790,
+          "height": 950,
+          "left": 3.246575342465753,
+          "top": 0,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/odyssey/29169518/0/201906261252261103.jpeg",
+          "originWidth": 790,
+          "originHeight": 950,
+          "effectedImage": null,
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0",
+          "clip": {
+            "bottom": 0,
+            "right": 0,
+            "left": 0,
+            "top": 0
+          }
+        },
+        {
+          "type": "image",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 745,
+          "height": 908,
+          "left": 19.499999999999986,
+          "top": 20.999999999999996,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/odyssey/29169518/0/201906261252261384.png",
+          "originWidth": 0,
+          "originHeight": 0,
+          "effectedImage": "",
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0"
+        },
+        {
+          "type": "image",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 316,
+          "height": 64,
+          "left": 28,
+          "top": 235,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/odyssey/29169518/0/2019062612522614214.jpeg",
+          "originWidth": 316,
+          "originHeight": 64,
+          "effectedImage": null,
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0",
+          "clip": {
+            "bottom": 0,
+            "right": 0,
+            "left": 0,
+            "top": 0
+          }
+        },
+        {
+          "type": "image",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 59,
+          "height": 53,
+          "left": 305.59859154929575,
+          "top": 211.32876712328763,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/odyssey/29169518/0/2019062612522614415.png",
+          "originWidth": 59,
+          "originHeight": 53,
+          "effectedImage": null,
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0",
+          "clip": {
+            "bottom": 0,
+            "right": 0,
+            "left": 0,
+            "top": 0
+          }
+        }
+      ],
+    "top": 0
+    }
+  ]
+}
