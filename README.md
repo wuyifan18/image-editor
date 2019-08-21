@@ -1,13 +1,13 @@
 # ImageEditor
 
 ## Overview
-An editor based on vuejs for images, support for rotation and scaling by manipulating dom directly.
+An editor based on vuejs for poster, support for rotation and scaling by manipulating dom directly.
 
 ## Features
-- Support image rotation
-- Support image scaling
+- Support rotation
+- Support scaling
 
 ## Contributing
-**If you have any questions, please open an** ***[issue](https://github.com/wuyifan18/ImageEditor/issues).***
+**If you have any questions, please open an** ***[issue](https://github.com/wuyifan18/image-editor/issues).***
 
-**Welcome to** ***[pull requests](https://github.com/wuyifan18/ImageEditor/pulls)*** **to improve this project!**
+**Welcome to** ***[pull requests](https://github.com/wuyifan18/image-editor/pulls)*** **to improve this project!**
