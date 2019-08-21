@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import '@/styles/index.css' // global css
+import '@/styles/font.css'
 window.$ = window.jQuery = require('jquery')
 
 Vue.config.productionTip = false

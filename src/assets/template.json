@@ -45,6 +45,66 @@
           ],
           "width": 790,
           "height": 950,
+          "left": 0,
+          "top": 0,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/odyssey/29169518/0/201906261252261062.jpeg",
+          "originWidth": 790,
+          "originHeight": 950,
+          "effectedImage": null,
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0",
+          "clip": {
+            "bottom": 0,
+            "right": 0,
+            "left": 0,
+            "top": 0
+          }
+        },
+        {
+          "type": "image",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 790,
+          "height": 950,
           "left": 3.246575342465753,
           "top": 0,
           "transform": {
@@ -145,6 +205,723 @@
           "aggregatedColors": [],
           "mainColor": null,
           "effectScale": 1,
+          "version": "5.7.0"
+        },
+        {
+          "type": "image",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 15,
+          "height": 18,
+          "left": 37,
+          "top": 481,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/odyssey/29169518/0/201906261252261395.png",
+          "originWidth": 15,
+          "originHeight": 18,
+          "effectedImage": null,
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0",
+          "clip": {
+            "bottom": 0,
+            "right": 0,
+            "left": 0,
+            "top": 0
+          }
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 137.17808219178082,
+          "height": 35.49315068493151,
+          "left": 58.82191780821918,
+          "top": 472.25342465753425,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "SourceHanSansSC-Bold",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 30,
+          "lineHeight": 1.2,
+          "letterSpacing": 0,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "center",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": false,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": "手绘小花",
+          "version": "5.7.0"
+        },
+        {
+          "type": "image",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 15,
+          "height": 18,
+          "left": 37,
+          "top": 525,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/odyssey/29169518/0/201906261252261417.png",
+          "originWidth": 15,
+          "originHeight": 18,
+          "effectedImage": null,
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0",
+          "clip": {
+            "bottom": 0,
+            "right": 0,
+            "left": 0,
+            "top": 0
+          }
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 138.17808219178082,
+          "height": 31.164383561643834,
+          "left": 58.82191780821918,
+          "top": 518.417808219178,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "SourceHanSansSC-Bold",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 30,
+          "lineHeight": 1.2,
+          "letterSpacing": 0,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "center",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": false,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": "凉爽透气",
+          "version": "5.7.0"
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 260.16438356164383,
+          "height": 44.986301369863014,
+          "left": 499.43835616438355,
+          "top": 884.013698630137,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "SourceHanSansSC-Bold",
+          "fontStyle": "normal",
+          "fontWeight": 700,
+          "fontSize": 38,
+          "lineHeight": 1.2,
+          "letterSpacing": 0,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "center",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": false,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": "MODEL SHOW",
+          "version": "5.7.0"
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 162,
+          "height": 26.56338028169014,
+          "left": 597.6027397260273,
+          "top": 857.4503183484469,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "SourceHanSansSC-Regular",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 20,
+          "lineHeight": 1.2,
+          "letterSpacing": 0,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "right",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": false,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": " /NEW FASHION ",
+          "version": "5.7.0"
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 431.06000385876905,
+          "height": 79.13698630136986,
+          "left": 44.499999999999986,
+          "top": 75.4035645379124,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "SourceHanSansSC-Bold",
+          "fontStyle": "italic",
+          "fontWeight": 700,
+          "fontSize": 61,
+          "lineHeight": 1.2,
+          "letterSpacing": 0,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "left",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": false,
+          "textEffects": [
+            {
+              "enable": true,
+              "collapse": false,
+              "excludeScale": [],
+              "offset": {
+                "enable": false,
+                "x": 0,
+                "y": 0
+              },
+              "skew": {
+                "enable": false,
+                "x": 0,
+                "y": 0
+              },
+              "stroke": {
+                "enable": false,
+                "color": "#000000ff",
+                "width": 3
+              },
+              "shadow": {
+                "enable": false,
+                "color": "#000000ff",
+                "offsetX": 0,
+                "offsetY": 0,
+                "blur": 0
+              },
+              "filling": {
+                "enable": true,
+                "type": 0,
+                "color": "#ffffffff",
+                "imageContent": {
+                  "repeat": 0,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "image": null,
+                  "width": null,
+                  "height": null
+                },
+                "gradient": {
+                  "byLine": 0,
+                  "angle": 0,
+                  "stops": [
+                    {
+                      "color": "#ffffffff",
+                      "offset": 0
+                    },
+                    {
+                      "color": "#000000ff",
+                      "offset": 1
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "enable": true,
+              "collapse": false,
+              "excludeScale": [],
+              "offset": {
+                "enable": false,
+                "x": 3.9732641678651714,
+                "y": 2.112622032536508
+              },
+              "skew": {
+                "enable": false,
+                "x": 0,
+                "y": 0
+              },
+              "stroke": {
+                "enable": false,
+                "color": "#000000ff",
+                "width": 3
+              },
+              "shadow": {
+                "enable": false,
+                "color": "#000000ff",
+                "offsetX": 0,
+                "offsetY": 0,
+                "blur": 0
+              },
+              "filling": {
+                "enable": true,
+                "type": 0,
+                "color": "#ffce91ff",
+                "imageContent": {
+                  "repeat": 0,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "image": null,
+                  "width": null,
+                  "height": null
+                },
+                "gradient": {
+                  "byLine": 0,
+                  "angle": 0,
+                  "stops": [
+                    {
+                      "color": "#ffffffff",
+                      "offset": 0
+                    },
+                    {
+                      "color": "#000000ff",
+                      "offset": 1
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": "NEW ARRIVAL",
+          "version": "5.7.0"
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 194.17808219178082,
+          "height": 43.9041095890411,
+          "left": 30.321917808219183,
+          "top": 179.3208904109589,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "SourceHanSansSC-Regular",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 31,
+          "lineHeight": 1.2,
+          "letterSpacing": 0,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "center",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": false,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": "休闲可爱风 /",
+          "version": "5.7.0"
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 142.013698630137,
+          "height": 35.45070422535211,
+          "left": 36.99999999999999,
+          "top": 333.08561643835617,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "SourceHanSansSC-Regular",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 30,
+          "lineHeight": 1.2,
+          "letterSpacing": 0,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "center",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": false,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": "2019 S/S",
+          "version": "5.7.0"
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 159,
+          "height": 39.24657534246575,
+          "left": 38,
+          "top": 375.2,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "SourceHanSansSC-Regular",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 16,
+          "lineHeight": 1.13,
+          "letterSpacing": 0,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "left",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": false,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": "Designer's creation is\nif it lacks the ability",
           "version": "5.7.0"
         },
         {
@@ -266,6 +1043,67 @@
             "left": 0,
             "top": 0
           }
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 307.36986301369865,
+          "height": 58.65753424657534,
+          "left": 32.31506849315068,
+          "top": 235,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "SourceHanSansSC-Bold",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 52,
+          "lineHeight": 1.2,
+          "letterSpacing": 0,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "center",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": false,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": "仙女印花T恤",
+          "version": "5.7.0"
         }
       ],
     "top": 0

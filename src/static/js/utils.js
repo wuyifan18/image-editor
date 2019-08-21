@@ -1,4 +1,5 @@
 var _ = require('lodash')
+const tinycolor = require('tinycolor2')
 import { Transform, Matrix } from './transform'
 var Vector = function Vector() {
   var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0
@@ -248,5 +249,99 @@ export default {
       }
     }
     return transform
+  },
+  fromHTML(contentModel) {
+    var styleMap = reverseSetMap({
+      'color': 'color',
+      'text-decoration': 'textDecoration',
+      'text-decoration-line': 'textDecoration',
+      'font-size': 'fontSize',
+      'font-family': 'fontFamily',
+      'font-weight': 'fontWeight',
+      'font-style': 'fontStyle'
+    })
+    var styleValueMap = {
+      'color': function color(value) {
+        return value && tinycolor(value).toString('rgb')
+      },
+      'font-size': function fontSize(value) {
+        return isNaN(value - 0) ? value : value + 'px'
+      },
+      'fontSize': function fontSize(value) {
+        return parseFloat(value)
+      },
+      'font-weight': function resetFontWeightValue(value) {
+        var map = {
+          '700': 700,
+          'bold': 700,
+          'true': 700
+        }
+        return map[value] || 400
+      },
+      'fontWeight': function resetFontWeightValue(value) {
+        var map = {
+          '700': 700,
+          'bold': 700,
+          'true': 700
+        }
+        return map[value] || 400
+      },
+      'fontFamily': function fontFamily(value) {
+        return value.replace(/"/g, '').split(',')[0]
+      },
+      'textDecoration': function textDecoration(value) {
+        return value === null || value === 'null' ? 'none' : value
+      },
+      'text-decoration': function textDecoration(value) {
+        return value === null || value === 'null' ? 'none' : value
+      },
+      'fontStyle': function fontStyle(value) {
+        return value === null || value === 'null' ? 'normal' : value
+      },
+      'font-style': function fontStyle(value) {
+        return value === null || value === 'null' ? 'normal' : value
+      }
+    }
+    var rBr = /<br\s*\/?>/ig
+    var rBreakLine = /\r?\n/gm
+    var rTwoSpace = /\s\s/g
+    var CUSTOMIZE_MARK = 'data-customize'
+    function reverseSetMap(map) {
+      Object.keys(map).forEach(function(name) {
+        map[map[name]] = name
+      })
+      return map
+    }
+    function _getStyleString(style) {
+      var result = ''
+      Object.keys(style).forEach(function(name) {
+        var value = style[name]
+        name = styleMap[name]
+
+        if (name) {
+          result += name + ': ' + (styleValueMap[name] ? styleValueMap[name](value) : value) + ';'
+        }
+      })
+      return result
+    }
+    var _this = this
+    var zoom = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1
+    if (!_.isArray(contentModel)) throw new TypeError('contentModel must be a array')
+    var result = ''
+    contentModel.forEach(function(node) {
+      if (node && node.content) {
+        var style = {}
+        Object.keys(node).forEach(function(name) {
+          if (styleMap[name]) {
+            style[name] = name === 'fontSize' ? node[name] * zoom : node[name]
+          }
+        })
+        style = _getStyleString(style)
+        var content = node.content.replace(rBr, '\n')
+        content = _.escape(_.unescape(content)).replace(rBreakLine, '<br>').replace(rTwoSpace, ' &nbsp;')
+        result += !style ? '<span ' + CUSTOMIZE_MARK + '="1">' + content + '</span>' : '<span ' + CUSTOMIZE_MARK + '="1" style=\'' + style + '\'>' + content + '</span>'
+      }
+    })
+    return result
   }
 }

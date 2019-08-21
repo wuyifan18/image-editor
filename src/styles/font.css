@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Source Han Sans SC Regular';
+    src: url("https://st0.dancf.com/csc/3/fonts/229/20180421-093200-1.ttf"),
+    url("https://st0.dancf.com/csc/3/fonts/229/20180421-093200-2.woff");
+}
+@font-face{
+    font-family: 'Source Han Sans SC Bold';
+    src: url("https://st0.dancf.com/csc/1/fonts/223/20180417-013045-7.ttf"),
+    url("https://st0.dancf.com/csc/1/fonts/223/20180417-013045-8.woff");
+}

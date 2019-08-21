@@ -11,6 +11,8 @@
 
 <script>
 import ImageElement from '@/components/elements/image/image-element'
+import TextElement from '@/components/elements/text/text-element'
+
 export default {
   name: 'EditorLayout',
   props: {

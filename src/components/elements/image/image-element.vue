@@ -1,5 +1,11 @@
 <template>
-  <div class="editor-element" :style="cssStyle">
+  <div
+    class="editor-element"
+    :class="[
+      'editor-element-' + element.type
+    ]"
+    :style="cssStyle"
+  >
     <img
       :src="element.url"
       :style="imgStyle"
@@ -20,15 +26,6 @@ export default {
     }
   },
   computed: {
-    cssStyle: function() {
-      return {
-        height: this.element.height + this.element.padding[0] + this.element.padding[2] + 'px',
-        width: this.element.width + this.element.padding[1] + this.element.padding[3] + 'px',
-        transform: this.element.transform.toString(),
-        left: this.element.left + 'px',
-        top: this.element.top + 'px'
-      }
-    },
     imgStyle: function() {
       return {
         position: 'absolute',
