@@ -4,7 +4,7 @@
       :is="getConponent(element.type)"
       v-for="(element,index) in layout.elements"
       :key="index"
-      :element="element"
+      :element.sync="element"
     />
   </div>
 </template>

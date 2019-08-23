@@ -117,7 +117,7 @@ export var Matrix = (function() {
   }, {
     key: 'apply',
     value: function apply(pos, newPos) {
-      newPos = newPos || point
+      // newPos = newPos
       var x = pos.x
       var y = pos.y
       newPos.x = this.a * x + this.c * y + this.tx
@@ -127,7 +127,7 @@ export var Matrix = (function() {
   }, {
     key: 'applyInverse',
     value: function applyInverse(pos, newPos) {
-      newPos = newPos || point
+      // newPos = newPos || point
       var id = 1 / (this.a * this.d + this.c * -this.b)
       var x = pos.x
       var y = pos.y
@@ -386,17 +386,11 @@ ObservablePoint.prototype.copy = function(point) {
 function Transform() {
   this._worldID = 0
   this.localTransform = new Matrix()
-
   this.position = new Point(0.0)
-
   this.scale = new Point(1, 1)
-
   this.skew = new ObservablePoint(this.updateSkew, this, 0, 0)
-
   this.pivot = new Point(0.0)
-
   this._rotation = 0
-
   this._sr = Math.sin(0)
   this._cr = Math.cos(0)
   this._cy = Math.cos(0)
@@ -458,7 +452,6 @@ Transform.prototype.toArray = function() {
   this.updateLocalTransform()
 
   var localTransform = this.localTransform
-
   return [localTransform.a, localTransform.b, localTransform.c, localTransform.d, localTransform.tx, localTransform.ty]
 }
 
@@ -474,7 +467,6 @@ Transform.prototype.toString = function() {
 
   return 'matrix(' + arr.join(', ') + ')'
 }
-
 export {
   Transform
 }

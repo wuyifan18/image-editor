@@ -1,7 +1,7 @@
 <template>
   <div class="editor-canvas">
     <EditorLayout
-      :layout="layouts[0]"
+      :layout.sync="layouts[0]"
     />
   </div>
 </template>
@@ -19,6 +19,6 @@ export default {
       type: Array,
       required: true
     }
-  }
+  },
 }
 </script>

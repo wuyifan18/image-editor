@@ -3,9 +3,11 @@
     class="editor-element"
     :style="cssStyle"
     :class="[
-      'editor-element-' + element.type
+      'editor-element-' + element.type,
+      element.$selected ? 'editor-element-selected' : '',
     ]"
   >
+<!--    <p>{{element.$selected}}</p>-->
     <div
       class="element-inner"
       :style="{
@@ -39,6 +41,7 @@
         />
       </div>
     </div>
+    <i class="border-before" :style="{zoom: 1}"></i>
   </div>
 </template>
 

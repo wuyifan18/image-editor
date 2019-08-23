@@ -135,7 +135,6 @@ export default {
       const dragger = this.dragger
       const handles = {
         init: function init(e) {
-          self.currentElement = self.element
           const element = self.element
           dragger.left = element.left
           dragger.top = element.top

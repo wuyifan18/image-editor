@@ -343,5 +343,79 @@ export default {
       }
     })
     return result
+  },
+  getBoundingClientRect() {
+    var $els = this.$refs
+    var transformEleRect = $els.transformEle.getBoundingClientRect()
+    var rotatorHandleRect = $els.rotatorHandle.getBoundingClientRect()
+    if (rotatorHandleRect.width === 0 || rotatorHandleRect.height === 0) {
+      rotatorHandleRect = transformEleRect
+    }
+    var rect = {
+      top: Math.min(transformEleRect.top, rotatorHandleRect.top),
+      left: Math.min(transformEleRect.left, rotatorHandleRect.left),
+      bottom: Math.max(transformEleRect.bottom, rotatorHandleRect.bottom),
+      right: Math.max(transformEleRect.right, rotatorHandleRect.right),
+
+      _transformEleRect: transformEleRect,
+      _rotatorHandleRect: rotatorHandleRect
+    }
+    rect.width = rect.right - rect.left
+    rect.height = rect.bottom - rect.top
+    return rect
+  },
+  getBBox(rect, zoom) {
+    var rectRotate = this.intLimit(rect.rotate, 360)
+    var rectHeight = rect.height
+    var rectWidth = rect.width
+    var rotate = rectRotate > 90 && rectRotate < 180 || rectRotate > 270 && rectRotate < 360 ? 180 - rectRotate : rectRotate
+    var rad = rotate * Math.PI / 180
+    var height = Math.abs(Math.sin(rad) * rectWidth + Math.cos(rad) * rectHeight)
+    var width = Math.abs(Math.sin(rad) * rectHeight + Math.cos(rad) * rectWidth)
+    var dotX = rect.left + rectWidth / 2
+    var dotY = rect.top + rectHeight / 2
+    var left = dotX - width / 2
+    var top = dotY - height / 2
+    zoom = zoom || 1
+    return {
+      rotate: rotate,
+      height: height * zoom,
+      width: width * zoom,
+      left: left * zoom,
+      top: top * zoom
+    }
+  },
+  getBBoxByElement(element, zoom) {
+    var rect = this.getElementRect(element, zoom)
+    return this.getBBox(rect)
+  },
+  getBBoxByElements(elements, zoom) {
+    var self = this
+    var top = Infinity
+    var left = Infinity
+    var right = -Infinity
+    var bottom = -Infinity
+    elements.forEach(function(element) {
+      var bbox = self.getBBoxByElement(element, zoom)
+      if (bbox.top < top) {
+        top = bbox.top
+      }
+      if (bbox.left < left) {
+        left = bbox.left
+      }
+      if (bbox.left + bbox.width > right) {
+        right = bbox.left + bbox.width
+      }
+      if (bbox.top + bbox.height > bottom) {
+        bottom = bbox.top + bbox.height
+      }
+    })
+    return {
+      rotate: 0,
+      height: bottom - top,
+      width: right - left,
+      left: left,
+      top: top
+    }
   }
 }

@@ -4,7 +4,7 @@ import utils from '../../static/js/utils'
 export default {
   name: 'BaseElement',
   computed: {
-    cssStyle: function() {
+    cssStyle() {
       return {
         height: this.element.height + this.element.padding[0] + this.element.padding[2] + 'px',
         width: this.element.width + this.element.padding[1] + this.element.padding[3] + 'px',

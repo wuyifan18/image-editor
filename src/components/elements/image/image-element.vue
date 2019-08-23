@@ -2,14 +2,22 @@
   <div
     class="editor-element"
     :class="[
-      'editor-element-' + element.type
+      'editor-element-' + element.type,
+      element.$selected ? 'editor-element-selected' : '',
     ]"
     :style="cssStyle"
   >
-    <img
-      :src="element.url"
-      :style="imgStyle"
+    <p>{{element.$selected}}</p>
+    <div
+      draggable="false"
+      class="element-main"
     >
+      <img
+        :src="element.url"
+        :style="imgStyle"
+      >
+    </div>
+    <i class="border-before" :style="{zoom: 1}" />
   </div>
 </template>
 
