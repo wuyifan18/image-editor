@@ -7,7 +7,6 @@
     ]"
     :style="cssStyle"
   >
-    <p>{{element.$selected}}</p>
     <div
       draggable="false"
       class="element-main"

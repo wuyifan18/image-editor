@@ -3,6 +3,7 @@
     <div
       v-if="element"
       class="editor-transform"
+      :class="[octant,isMultiple ? 'editor-transform-multiple' : '']"
       :style="transformStyle"
     >
       <i
@@ -70,10 +71,18 @@ export default {
         top: 0,
         dx: 0,
         dy: 0
-      }
+      },
+      selectDrag: []
     }
   },
   computed: {
+    octant: function octant() {
+      var rotate = this.element.rotate
+      return 'octant' + Math.floor((rotate + 22.5) / 45)
+    },
+    isMultiple: function isMultiple() {
+      return this.element && ['$selector', 'group'].includes(this.element.type)
+    },
     minSize() {
       var element = this.element
       var width = element.width
@@ -133,9 +142,19 @@ export default {
     initDragger: function initDragger(element) {
       const self = this
       const dragger = this.dragger
+      let selectDrag = this.selectDrag
       const handles = {
         init: function init(e) {
           const element = self.element
+          if (element.type === '$selector') {
+            selectDrag = []
+            for (let i = 0; i < element.elements.length; i++) {
+              selectDrag.push({
+                left: element.elements[i].left,
+                top: element.elements[i].top
+              })
+            }
+          }
           dragger.left = element.left
           dragger.top = element.top
           dragger.pageX = e.pageX
@@ -156,7 +175,7 @@ export default {
             element.$draging = true
           }
           if (element.$draging) {
-            self.$emit('base.dragMove', dragger, element, e)
+            self.$emit('base.dragMove', dragger, selectDrag, element, e)
           }
         },
         cancel: function cancel() {
@@ -321,12 +340,18 @@ export default {
     }
   },
   events: {
-    'base.dragMove': function baseDragMove(drag, element) {
+    'base.dragMove': function baseDragMove(drag, selectDrag, element) {
       if (element !== this.element) {
         return false
       }
       const left = drag.left + drag.dx
       const top = drag.top + drag.dy
+      if (element.type === '$selector') {
+        for (let i = 0; i < element.elements.length; i++) {
+          element.elements[i].left = selectDrag[i].left + drag.dx
+          element.elements[i].top = selectDrag[i].top + drag.dy
+        }
+      }
       element.left = left
       element.top = top
     },
@@ -397,6 +422,12 @@ export default {
       })()
     },
     'element.transformRotate': function elementTransformRotate(drag, element) {
+      if (element.type === '$selector') {
+        for (let i = 0; i < element.elements.length; i++) {
+          element.elements[i].rotate = drag.rotate
+          element.elements[i].transform.rotation = drag.rotate * Math.PI / 180
+        }
+      }
       element.rotate = drag.rotate
       element.transform.rotation = drag.rotate * Math.PI / 180
     }

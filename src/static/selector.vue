@@ -32,17 +32,17 @@ export default {
     }
   },
   computed: {
-    editor: function editor() {
+    editor: function() {
       return this.$parent
     },
-    currentLayout: function currentLayout() {
+    currentLayout: function() {
       return this.editor.currentLayout
     },
-    elements: function elements() {
+    elements: function() {
       var layout = this.currentLayout
       return layout ? layout.elements : []
     },
-    selectedElements: function selectedElements() {
+    selectedElements: function() {
       var elements = this.elements
       elements = elements.filter(function(element) {
         return element.$selected
@@ -213,21 +213,34 @@ export default {
       }
       var bbox = utils.getBBoxByElements(elements, 1)
       var selector = this.createElement({
+        $id: this.elements.length + 1,
+        $selected: false,
         type: '$selector',
         rotatable: true,
+        rotate: 0,
         resize: 1,
         height: bbox.height,
         width: bbox.width,
         left: bbox.left,
         top: bbox.top,
-        elements: elements,
-        $guider: { show: false, snapTo: false }
+        transform: utils.parseTransform({
+          'a': 1,
+          'b': 0,
+          'c': 0,
+          'd': 1,
+          'tx': 0,
+          'ty': 0
+        }),
+        elements: elements
       })
       this.focusElement(selector)
       this.selector = selector
+      this.elements.push(selector)
     },
     clearSelectedElements: function clearSelectedElements() {
       var selectedElements = this.selectedElements
+      const index = this.currentLayout.elements.indexOf(this.selector)
+      if (index !== -1) { this.currentLayout.elements.splice(index, 1) }
       if (selectedElements.length) {
         selectedElements.forEach(function(element) {
           element.$selected = false

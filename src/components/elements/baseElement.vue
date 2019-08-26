@@ -1,5 +1,4 @@
 <script>
-const doc = $(document)
 import utils from '../../static/js/utils'
 export default {
   name: 'BaseElement',

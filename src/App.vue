@@ -61,8 +61,6 @@ export default {
       layouts: null,
       currentLayout: null,
       currentElement: null,
-      selectedElements: [],
-      hasMove: null,
       zoom: null,
       shellRect: {
         height: 0,
@@ -93,25 +91,15 @@ export default {
   mounted: function() {
     this.$nextTick(() => {
       this.shellRect = this.updateShellRect()
-      var hasMove = false // 全局标识，初始化标识元素没有发生mousemove
       var x = null
       var y = null
       $(document).on('mousedown', (e) => {
         x = e.pageX
         y = e.pageY
-        hasMove = false
+        const left = $('div.editor-shell-wrap').offset().left
+        const top = $('div.editor-shell-wrap').offset().top
+        this.currentElement = this.getElementsByPoint(e.pageX - left, e.pageY - top)[0]
         this.$refs.selector.$emit('base.mouseDown', e)
-      })
-      $(document).on('mouseup', (e) => {
-        if (!hasMove) {
-          const left = $('div.editor-shell-wrap').offset().left
-          const top = $('div.editor-shell-wrap').offset().top
-          this.currentElement = this.getElementsByPoint(e.pageX - left, e.pageY - top)[0]
-        }
-        hasMove = false
-      })
-      $(document).on('mousemove', (e) => {
-        if (Math.abs(x - e.pageX) > 0 || (y - e.pageY) > 0) { hasMove = true }
       })
     })
   },
