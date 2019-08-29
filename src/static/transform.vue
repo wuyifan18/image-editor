@@ -214,6 +214,8 @@ export default {
         minTop: 0,
         maxLeft: 0,
         maxTop: 0,
+        resizeDrag: [],
+        dxdyDrag: [],
         move: function move(e) {
           e.preventDefault()
           var dx = e.pageX - drag.pageX
@@ -240,6 +242,19 @@ export default {
           if (!drag.draging) {
             drag.draging = true
           }
+          if (element.type === '$selector') {
+            drag.dxdyDrag = []
+            for (let i = 0; i < element.elements.length; i++) {
+              if (dir.length > 1 && !e.shiftKey) {
+                var ratio1 = drag.height / drag.width || 1
+                if (dir === 'ne' || dir === 'sw') {
+                  ratio1 *= -1
+                }
+                dxy.dy = dxy.dx * ratio1
+              }
+              drag.dxdyDrag.push({ dx: dxy.dx, dy: dxy.dy })
+            }
+          }
           self.$emit('element.transformResize', drag, element, e)
         },
         cancel: function cancel() {
@@ -253,6 +268,19 @@ export default {
         }
       }
       element.$draging = true
+      if (element.type === '$selector') {
+        drag.resizeDrag = []
+        for (let i = 0; i < element.elements.length; i++) {
+          drag.resizeDrag.push({
+            rotate: element.elements[i].rotate,
+            height: element.elements[i].height,
+            width: element.elements[i].width,
+            left: element.elements[i].left,
+            top: element.elements[i].top,
+            points: utils.getRectPoints(element.elements[i])
+          })
+        }
+      }
       doc.on('mousemove', drag.move)
       doc.one('mouseup', drag.cancel)
     },
@@ -420,6 +448,73 @@ export default {
         element.left = preLeft - (newPoint.x - prePoint.x)
         element.top = preTop - (newPoint.y - prePoint.y)
       })()
+      if (element.type === '$selector') {
+        for (let i = 0; i < element.elements.length; i++) {
+          var preWidth1 = drag.resizeDrag[i].width
+          var preHeight1 = drag.resizeDrag[i].height
+          var preLeft1 = drag.resizeDrag[i].left
+          var preTop1 = drag.resizeDrag[i].top
+          if (dir.indexOf('w') > -1) {
+            drag.dxdyDrag[i].dx *= -1
+          }
+          if (dir.indexOf('n') > -1) {
+            drag.dxdyDrag[i].dy *= -1
+          }
+          // 计算拖拽后图片的宽高
+          var width1 = Number(preWidth1) + drag.dxdyDrag[i].dx
+          var height1 = Number(preHeight1) + drag.dxdyDrag[i].dy
+          var widthTo1 = width1
+          var heightTo1 = height1
+          var limit1 = void 0
+          var minWidth1 = 0
+          var minHeight1 = 0
+          var isCommonMinSize1 = minWidth1 <= 1 || minHeight1 <= 1
+          if (isCommonMinSize1) {
+            if (drag.resizeDrag[i].width < drag.resizeDrag[i].height) {
+              minHeight1 = drag.resizeDrag[i].height / drag.resizeDrag[i].width
+            } else {
+              minWidth1 = drag.resizeDrag[i].width / drag.resizeDrag[i].height
+            }
+          }
+          var maxWidth1 = preWidth1 * 2
+          var maxHeight1 = preHeight1 * 2
+          width1 = Math.min(Math.max(1, minWidth1, width1), maxWidth1)
+          height1 = Math.min(Math.max(1, minHeight1, height1), maxHeight1)
+          if (limit1 && dir.length > 1) {
+            if (width1 !== widthTo1) {
+              height1 = Math.max(limit1.minHeight, heightTo1 * width1 / widthTo1)
+            }
+            if (height1 !== heightTo1) {
+              width1 = widthTo1 * height1 / heightTo1
+            }
+          }
+          element.elements[i].width = width1
+          element.elements[i].height = height1;
+          (function() {
+            var points = utils.getRectPoints({
+              left: preLeft1, // 拖拽前的left
+              top: preTop1, // 拖拽前的top
+              width: width1, // 拖拽后图片宽度
+              height: height1, // 拖拽后图片高度
+              rotate: element.elements[i].rotate
+            })
+            var diagonal = {
+              nw: 'se',
+              ne: 'sw',
+              n: 'sw',
+              w: 'se',
+              sw: 'ne',
+              se: 'nw',
+              s: 'ne',
+              e: 'nw'
+            }[dir]
+            var newPoint = points[diagonal]// 以左上角为顶点进行相应的变换
+            var prePoint = drag.resizeDrag[i].points[diagonal]// 拖拽前对角坐标
+            element.elements[i].left = preLeft1 - (newPoint.x - prePoint.x)
+            element.elements[i].top = preTop1 - (newPoint.y - prePoint.y)
+          })()
+        }
+      }
     },
     'element.transformRotate': function elementTransformRotate(drag, element) {
       if (element.type === '$selector') {
